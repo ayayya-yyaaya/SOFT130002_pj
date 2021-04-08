@@ -1,7 +1,7 @@
 .header {
     margin: 0;
     background-color: black;
-    padding: 3px;
+    padding: 10px;
 }
 
 .header_title {
@@ -14,23 +14,32 @@
 
 .img_container {
     display: flex;
-    width: 100%;
+    width: 80%;
     text-align: center;
+    margin-right: 0;
+    margin-left: 100px;
 }
 
 .popular_img {
     width: 300px;
+    height: 400px;
 }
 
 .duiqi {
     margin: auto;
+    font-family: serif;
+}
+
+.subtitle {
+    text-align: center;
 }
 
 .navigation {
     display: inline-block;
     color: white;
+    font-size: large;
     text-decoration: none;
-    float: right;
+    /* float: right; */
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -55,8 +64,14 @@
 }
 
 .detailed_img {
-    width: 50%;
-    height: 50%;
+    width: 40%;
+    height: 40%;
+    text-align: center;
+}
+
+.detailed_img_search {
+    width: 20%;
+    height: 20%;
     text-align: center;
 }
 
@@ -67,13 +82,87 @@
     width: 50%;
 }
 
-.text_details{
+.text_details {
     margin-left: 10%;
 }
 
 label {
-    display:inline-block; 
+    display: inline-block;
     width: 10em;
     margin-right: 1em;
-    text-align: right; 
+    text-align: right;
+}
+
+.shining_button {
+    margin-top: 10px;
+    background-color: white;
+    font-size: large;
+}
+
+.shining_button:hover {
+    background-color: black;
+    color: blanchedalmond;
+}
+
+#shoucang {
+    width: 80px;
+    height: 30px;
+}
+
+.work_name {
+    margin-bottom: 5px;
+}
+
+.underSearchframe {
+    display: block;
+    margin: auto;
+    width: 80px;
+    height: 30px;
+    font-size: large;
+}
+
+.Searchframe {
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+    width: 600px;
+    height: 30px;
+    font-size: large;
+}
+
+.result_container {
+    display: block;
+}
+
+.result_content {
+    height: 30%;
+    width: 30%;
+}
+
+.centerform {
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 400px;
+}
+
+.pagination {
+    display: inline-block;
+    padding: 0;
+    margin-left: 540px;
+}
+
+.pagination li {
+    display: inline;
+}
+
+.pagination li a {
+    color: black;
+    float: left;
+    padding: 2px 6px;
+    text-decoration: none;
+}
+
+.usrinfo{
+    display: inline;
 }

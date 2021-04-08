@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Search</title>
+    <link href="1.css" rel="stylesheet">
+    <script type="text/javascript" src="jquery.js"></script>
+</head>
+
+<body>
+    <div class="header"><span class="header_title">Art Gallery</span>
+        <a class="navigation" href="myfavourite.html">个人收藏</a>
+        <a class="navigation" href="login.html">登录</a>
+        <a class="navigation" href="sign_up.html">注册</a>
+        <a class="navigation" href="search.html">搜索</a>
+        <a class="navigation" href="index.html">首页</a>
+    </div>
+    <div class="Search">
+        <input class="Searchframe" type="text" placeholder="请输入..." name="" id="search-input" value="" />
+        <br>
+        <button class="underSearchframe" onclick="search()" id="search-btn" type="button"><i>搜索</i></button>
+        <select>
+            <option value ="降序">降序</option>
+            <option value ="升序">升序</option>
+        </select>
+    </div>
+    <br>
+    <div class="result_container">
+        <div class="result_content">
+            <br>
+            <div class="a"><span></span></div>
+        </div>
+    </div>
+    <ul class="pagination">
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a class="active" href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li><a href="#">»</a></li>
+    </ul>
+
+</body>
+<script>
+    function search() {
+        let input = document.getElementById("search-input")
+        // console.log(input.value)
+        let result = document.getElementsByClassName("result_container")[0];
+        if (input.value != "") {
+            result.innerHTML = '<div class="result_content""><div class="a"><a href ="display_intro.html"><span><1>Sardanapalus by Ferdinand Victor Eugene Delacroix</span></a></div></div>'
+                + '<div><img class="detailed_img_search" src="../Lab1/lab1/resources_lab1/resources/img/80.jpg"></div>'
+                + '<div class="result_content"><div class="a"><a href ="display_intro.html"><span><2>The Four Philosophers by Peter Paul Rubens</span></a></div></div>'
+                + '<div><img class="detailed_img_search" src="../Lab1/lab1/resources_lab1/resources/img/81.jpg"></div>'
+                + '<div class="result_content"><div class="a"><span><3>102 by Peter Paul Rubens</span></div></div>'
+                + '<div><img class="detailed_img_search" src="../Lab1/lab1/resources_lab1/resources/img/102.jpg"></div>'
+                + '<div class="result_content"><div class="a"><span><4>103 by Peter Paul Rubens</span></div></div>'
+                + '<div><img class="detailed_img_search" src="../Lab1/lab1/resources_lab1/resources/img/103.jpg"></div>'
+                + '<div class="result_content"><div class="a"><span><5>14 by Peter Paul Rubens</span></div></div>'
+                + '<div><img class="detailed_img_search" src="../Lab1/lab1/resources_lab1/resources/img/14.jpg"></div>'
+                + '<div class="result_content"><div class="a"><span><6>85 by Peter Paul Rubens</span></div></div>'
+                + '<div><img class="detailed_img_search" src="../Lab1/lab1/resources_lab1/resources/img/85.jpg"></div>'
+
+        } else {
+            result.innerHTML = ""
+        }
+    }
+</script>
+
+</html>
