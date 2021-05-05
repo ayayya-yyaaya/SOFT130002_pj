@@ -16,18 +16,18 @@
         <a class="navigation" href="index.html">首页</a>
     </div>
     <div>
-        <form class="centerform" action="javascript:void(0)" method="post">
+        <form class="centerform" action="javascript:void(0)" method="post" onsubmit="signUp_alert()">
             <div>
                 <label>用户名/昵称：</label>
-                <input type="text" name="" id="" value="" />
+                <input type="text" name="" id="nameSign" value="" />
             </div>
             <div>
                 <label>密码：</label>
-                <input type="password" name="" id="" value="" />
+                <input type="password" name="" id="passwordSign" value="" />
             </div>
             <div>
                 <label>确认密码：</label>
-                <input type="email" name="" id="" value="" />
+                <input type="password" name="" id="confirmPasswordSign" value="" />
             </div>
             <div>
                 <label></label><input type="submit" value="Register" style="margin-left: 55px; margin-top: 10px;" />
@@ -35,5 +35,27 @@
     </div>
     </form>
 </body>
+<script>
+    function signUp_alert() {
+        let nichen = document.getElementById("nameSign").value
+        let password = document.getElementById("passwordSign").value
+        let confirmPassword = document.getElementById("confirmPasswordSign").value
+        var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{1,}$/
+        if (nichen == null || nichen == undefined || nichen == '' ||
+            password == null || password == undefined || password == '' ||
+            confirmPassword == null || confirmPassword == undefined || confirmPassword == '') {
+            alert("注册错误，表单不完整")
+        }
+        else if (!(password == confirmPassword)) {
+            alert("两次密码不一致")
+        }
+        else if(!reg.exec(password)){
+            alert("密码需同时包含数字和字母")
+        }
+        else{
+            alert("注册成功")
+        }
+    }
+</script>
 
 </html>
