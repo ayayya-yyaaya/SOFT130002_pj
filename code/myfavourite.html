@@ -6,6 +6,7 @@
     <title>My Favourite</title>
     <link href="1.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="header"><span class="header_title">Art Gallery</span>
         <a class="navigation" href="myfavourite.html">个人收藏</a>
@@ -14,46 +15,73 @@
         <a class="navigation" href="search.html">搜索</a>
         <a class="navigation" href="index.html">首页</a>
     </div>
-    <div class ="Search">
+    <div class="Search">
         <input type="text" placeholder="请输入..." name="" id="" value="" />
         <br>
-        <button ><i>搜索</i></button>
+        <button><i>搜索</i></button>
     </div>
-    <div><h4>我的信息</h4></div>
+    <div>
+        <h4>我的信息</h4>
+    </div>
     <div class="usrinfo">
         <h5>用户名</h5>
         <h5>密码</h5>
         <h5>收藏数</h5>
     </div>
-    <div><h4>我的收藏</h4></div>
+    <div>
+        <h4>我的收藏</h4>
+    </div>
     <div class="img_container">
-        <div class="duiqi"><img class="popular_img" src="lab1/resources_lab1/resources/img/81.jpg">
+        <div class="duiqi" id="fav1"><img class="popular_img" src="lab1/resources_lab1/resources/img/81.jpg">
             <br>
-            <h4 class = "work_name">Picasso's some Work</h4>
-            <span>Author: Picasso or other spelling</span>
-            <br>
-            <span>Introduction: just baidu shitu</span>
-            <br>
-            <a href="display_intro.html"><button class = "shining_button" type="button">View Details</button></a>
-        </div>
-        <div class="duiqi"><img class="popular_img" src="lab1/resources_lab1/resources/img/141.jpg">
-            <br>
-            <h4 class = "work_name">Someone's Work</h4>
+            <h4 class="work_name">Picasso's some Work</h4>
             <span>Author:Unknown</span>
             <br>
             <span>Introduction: just baidu shitu</span>
             <br>
-            <a href="display_intro.html"><button class = "shining_button" type="button">View Details</button></a>
-        </div>
-        <div class="duiqi"><img class="popular_img" src="lab1/resources_lab1/resources/img/140.jpg">
+            <a href="display_intro.html"><button class="shining_button" type="button" id="butFav1">View Details</button></a>
             <br>
-            <h4 class = "work_name">Someone's Work</h4>
+            <button class="deleteFavourite" type="button" onclick="deleteFavourite('fav1')">Delete</button>
+        </div>
+        <div class="duiqi" id="fav2"><img class="popular_img" src="lab1/resources_lab1/resources/img/141.jpg">
+            <br>
+            <h4 class="work_name">Someone's Work</h4>
             <span>Author:Unknown</span>
             <br>
             <span>Introduction: just baidu shitu</span>
             <br>
-            <a href="display_intro.html"><button class = "shining_button" type="button">View Details</button></a>
+            <a href="display_intro.html"><button class="shining_button" type="button" id="butFav2">View Details</button></a>
+            <br>
+            <button class="deleteFavourite" type="button" onclick="deleteFavourite('fav2')">Delete</button>
+        </div>
+        <div class="duiqi" id="fav3"><img class="popular_img" src="lab1/resources_lab1/resources/img/140.jpg">
+            <br>
+            <h4 class="work_name">Someone's Work</h4>
+            <span>Author:Unknown</span>
+            <br>
+            <span>Introduction: just baidu shitu</span>
+            <br>
+            <a href="display_intro.html"><button class="shining_button" type="button" id="butFav3">View Details</button></a>
+            <br>
+            <button class="deleteFavourite" type="button" onclick="deleteFavourite('fav3')">Delete</button>
         </div>
     </div>
+    <ul class="pagination">
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a class="active" href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li><a href="#">»</a></li>
+    </ul>
 </body>
+<script>
+    function deleteFavourite(object){
+        let flag = document.getElementById(object)
+        flag.style.display='none'
+    }
+</script>
 </html>

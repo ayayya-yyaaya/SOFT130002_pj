@@ -12,8 +12,21 @@
     width: 100%;
 }
 
-.img_container {
+/*我的收藏中按行显示*/
+
+/* .img_container {
     display: flex;
+    width: 80%;
+    text-align: center;
+    margin-right: 0;
+    margin-left: 100px;
+} */
+
+/*我的收藏中按列显示*/
+
+.img_container {
+    display: block;
+    float: left;
     width: 80%;
     text-align: center;
     margin-right: 0;
@@ -104,6 +117,11 @@ label {
     color: blanchedalmond;
 }
 
+.deleteFavourite:hover {
+    background-color: black;
+    color: blanchedalmond;
+}
+
 #shoucang {
     width: 80px;
     height: 30px;
@@ -163,6 +181,6 @@ label {
     text-decoration: none;
 }
 
-.usrinfo{
+.usrinfo {
     display: inline;
 }

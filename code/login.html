@@ -15,19 +15,30 @@
         <a class="navigation" href="search.html">搜索</a>
         <a class="navigation" href="index.html">首页</a>
     </div>
-        <form class="centerform" action="javascript:void(0)" method="post">
+        <form name="loginForm" class="centerform" action="javascript:void(0)" method="post" onsubmit="login_alert()">
             <div>
                 <label>用户名：</label>
-                <input type="text" name="" id="" value="" />
+                <input type="text" name="username" id="nameLogin" value="" />
             </div>
             <div>
                 <label>密码：</label>
-                <input type="password" name="" id="" value="" />
+                <input type="password" name="userpassword" id="passwordLogin" value="" />
             </div>
             <div>
                 <label></label><input type="submit" value="Login" style="margin-left: 55px; margin-top: 10px;"/>
             </div>
     </form>
 </body>
-
+<script>
+    function login_alert() {
+        let input_name = document.getElementById("nameLogin").value
+        let input_password = document.getElementById("passwordLogin").value
+        if (input_name == undefined || input_name == null || input_name =='' || input_password == null|| input_password =='' ||input_password == undefined) {
+            alert("登陆错误！用户名或密码不存在")
+        }
+        else {
+            alert("登陆成功")
+        }
+    }
+</script>
 </html>
